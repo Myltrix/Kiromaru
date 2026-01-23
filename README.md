@@ -10,8 +10,8 @@
       </p>
       <p style="font-size: 16px;">
         <strong style="color: #2a2a72;">Live Website:</strong><br>
-        <a href="https://kiromaru.netlify.app" target="_blank" style="color: #e8497e; font-weight: bold; text-decoration: none; font-size: 18px;">
-          https://kiromaru.netlify.app
+        <a href="https://myltrix.github.io/Kiromaru/" target="_blank" style="color: #e8497e; font-weight: bold; text-decoration: none; font-size: 18px;">
+          https://myltrix.github.io/Kiromaru/
         </a>
       </p>
       <p style="font-size: 16px;">
