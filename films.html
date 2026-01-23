@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Фильмы — Kiromaru</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles/films.css">
+  <link rel="icon" href="images/KiromaruLogo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="background-container">
+    <div class="site-background active" id="bg1" style="background-image: url('https://gamemag.ru/images/cache/News/News172777/e041a9b2cb-2_1390x600.jpg')"></div>
+    <div class="site-background" id="bg2" style="background-image: url('https://sun9-54.userapi.com/impg/xlsPFHkFzujJIzpQkEqsiiCmVb7CY3SfvFObRw/d3nMjtQ9KPE.jpg?size=604x327&quality=96&sign=85bfce55eea6ec3effb9ab514803f427&type=album')"></div>
+    <div class="site-background" id="bg3" style="background-image: url('https://99px.ru/sstorage/53/2014/01/tmb_93842_8236.jpg')"></div>
+  </div>
+
+  <header>
+    <div class="left-header">
+      <img src="images/Kiromaru.png" alt="Логотип" class="logo">
+      <div class="logo-text">Kiromaru</div>
+      <nav>
+        <a href="index.html">Главное</a>
+        <a href="anime.html">Аниме</a>
+        <a href="films.html">Фильмы</a>
+        <a href="news.html">Новости</a>
+      </nav>
+    </div>
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" class="search-input" placeholder="Поиск фильмов..." id="searchInput">
+    </div>
+  </header>
+
+  <div class="search-error" id="searchError">Фильм не найден. Попробуйте другой запрос.</div>
+
+  <div class="main-content">
+    <section class="film-section" id="film1">
+      <div class="film-item">
+        <div class="film-image-container">
+          <img src="https://www.kino-teatr.ru/movie/poster/125237/88097.jpg" alt="Твое имя" class="film-image" onclick="openContentDetails('Твое имя', 'https://www.kino-teatr.ru/movie/poster/125237/88097.jpg', 'film')">
+        </div>
+        <div class="film-text-container">
+          <div class="film-text">
+            <h2>Твое имя</h2>
+            <p>Токийский парень Таки и провинциальная девушка Мицуха обнаруживают, что между ними существует странная связь. Во сне они меняются телами и проживают жизни друг друга. Но однажды эта способность исчезает так же внезапно, как появилась. Таки решает во что бы то ни стало отыскать Мицуху.</p>
+            <div class="rating">
+              <div class="stars">★★★★☆</div>
+              <div class="rating-text">| Средняя оценка:8.6/10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-section" id="film2">
+      <div class="film-item reverse">
+        <div class="film-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/ru/9/93/%D0%9C%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA_%D0%B8_%D0%BF%D1%82%D0%B8%D1%86%D0%B0_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpeg" alt="Мальчик и Птица" class="film-image" onclick="openContentDetails('Мальчик и Птица', 'https://upload.wikimedia.org/wikipedia/ru/9/93/%D0%9C%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA_%D0%B8_%D0%BF%D1%82%D0%B8%D1%86%D0%B0_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpeg', 'film')">
+        </div>
+        <div class="film-text-container">
+          <div class="film-text">
+            <h2>Мальчик и Птица</h2>
+            <p>Через три года после начала Тихоокеанской войны мама мальчика Махито погибла при пожаре в Токио, а ещё через год отец женился на её сестре и отправил сына в фамильное поместье в сельской местности. Глава семьи работает на оборонном заводе и редко бывает дома, поэтому мальчику приходится проводить дни с беременной мачехой и в окружении пожилой прислуги, и, кроме того, с самого первого дня его донимает подозрительная серая цапля. Однажды птица говорит Махито, что может отвести его к матери, и заманивает в загадочную башню, которую окружает множество местных легенд.</p>
+            <div class="rating">
+              <div class="stars">★★★★☆</div>
+              <div class="rating-text">| Средняя оценка:8.5/10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-section" id="film3">
+      <div class="film-item">
+        <div class="film-image-container">
+          <img src="https://static.okko.tv/images/v4/c9cd50d0-88f2-4a9b-952e-a75d91683cb6" alt="Унесённые призраками" class="film-image" onclick="openContentDetails('Унесённые призраками', 'https://static.okko.tv/images/v4/c9cd50d0-88f2-4a9b-952e-a75d91683cb6', 'film')">
+        </div>
+        <div class="film-text-container">
+          <div class="film-text">
+            <h2>Унесённые призраками</h2>
+            <p>Тихиро с мамой и папой переезжает в новый дом. Заблудившись по дороге, они оказываются в странном пустынном городе, где их ждет великолепный пир. Родители с жадностью набрасываются на еду и к ужасу девочки превращаются в свиней, став пленниками злой колдуньи Юбабы. Теперь, оказавшись одна среди волшебных существ и загадочных видений, Тихиро должна придумать, как избавить своих родителей от чар коварной старухи.</p>
+            <div class="rating">
+              <div class="stars">★★★★☆</div>
+              <div class="rating-text">| Средняя оценка:8.6/10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-nav">
+      <div class="nav-dot active" data-section="film1" data-title="Твое имя"></div>
+      <div class="nav-dot" data-section="film2" data-title="Мальчик и Птица"></div>
+      <div class="nav-dot" data-section="film3" data-title="Унесённые призраками"></div>
+    </div>
+
+    <section class="section">
+      <h2>Популярные сейчас</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel1', -1)">❮</button>
+        <div class="card-carousel" id="carousel1">
+          <div class="card" onclick="openContentDetails('Ходячий замок', 'https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/8910a865-9915-4844-ad89-d4812f64a16e/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/8910a865-9915-4844-ad89-d4812f64a16e/600x900"><p>Ходячий замок</p></div>
+          <div class="card" onclick="openContentDetails('Мой сосед Тоторо', 'https://avatars.mds.yandex.net/get-kinopoisk-image/10703959/507d8d5c-87e0-4b2e-8da3-e699976ab1cf/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/10703959/507d8d5c-87e0-4b2e-8da3-e699976ab1cf/600x900"><p>Мой сосед Тоторо</p></div>
+          <div class="card" onclick="openContentDetails('Ученик чудовища', 'https://files.itv.uz/uploads/content/poster/2022/10/18/d360a0090a76719ad2a6c4ebfbbda1ed-q-700x1002.jpeg', 'film')"><img src="https://files.itv.uz/uploads/content/poster/2022/10/18/d360a0090a76719ad2a6c4ebfbbda1ed-q-700x1002.jpeg"><p>Ученик чудовища</p></div>
+          <div class="card" onclick="openContentDetails('Принцесса Мононоке', 'https://avatars.mds.yandex.net/get-kinopoisk-image/10671298/0f8a0f49-c2e4-4d9e-a0dc-d8972b7a619f/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/10671298/0f8a0f49-c2e4-4d9e-a0dc-d8972b7a619f/600x900"><p>Принцесса Мононоке</p></div>
+          <div class="card" onclick="openContentDetails('Дитя погоды', 'https://www.kino-teatr.ru/movie/posters/big/1/3/135231.jpg', 'film')"><img src="https://www.kino-teatr.ru/movie/posters/big/1/3/135231.jpg"><p>Дитя погоды</p></div>
+          <div class="card" onclick="openContentDetails('Сад изящных слов', 'https://upload.wikimedia.org/wikipedia/ru/b/b7/%D0%A1%D0%B0%D0%B4_%D0%B8%D0%B7%D1%8F%D1%89%D0%BD%D1%8B%D1%85_%D1%81%D0%BB%D0%BE%D0%B2_%E2%80%94_%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0.jpg', 'film')"><img src="https://upload.wikimedia.org/wikipedia/ru/b/b7/%D0%A1%D0%B0%D0%B4_%D0%B8%D0%B7%D1%8F%D1%89%D0%BD%D1%8B%D1%85_%D1%81%D0%BB%D0%BE%D0%B2_%E2%80%94_%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0.jpg"><p>Сад изящных слов</p></div>
+          <div class="card" onclick="openContentDetails('Ветер крепчает', 'https://avatars.mds.yandex.net/get-kinopoisk-image/10592371/51fa972e-7217-44c7-8701-9ff4ecaf2fbb/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/10592371/51fa972e-7217-44c7-8701-9ff4ecaf2fbb/600x900"><p>Ветер крепчает</p></div>
+          <div class="card" onclick="openContentDetails('Шёпот сердца', 'https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/ef8cb3fc-78fe-41f4-b3dc-c0afb0a44b87/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/ef8cb3fc-78fe-41f4-b3dc-c0afb0a44b87/600x900"><p>Шёпот сердца</p></div>
+          <div class="card" onclick="openContentDetails('Форма голоса', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/8f74e2dc-2bb3-45a7-a770-021b4dc86bf9/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/8f74e2dc-2bb3-45a7-a770-021b4dc86bf9/600x900"><p>Форма голоса</p></div>
+          <div class="card" onclick="openContentDetails('5 сантиметров в секунду', 'https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/de727406-1f97-4205-b509-3a73d3dc2157/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/de727406-1f97-4205-b509-3a73d3dc2157/600x900"><p>5 сантиметров в секунду</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel1', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Топовые</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel2', -1)">❮</button>
+        <div class="card-carousel" id="carousel2">
+          <div class="card" onclick="openContentDetails('Атака Титанов: Последняя Атака', 'https://i.redd.it/yne99eegmdje1.jpeg', 'film')"><img src="https://i.redd.it/yne99eegmdje1.jpeg"><p>Атака Титанов: Последняя Атака</p></div>
+          <div class="card" onclick="openContentDetails('Властелин колец: Война рохирримов', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcThxzvBUOvOS0tgyww6qYId3i_92RKk9uNnQlSQ74LnAdQtdMa1', 'film')"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcThxzvBUOvOS0tgyww6qYId3i_92RKk9uNnQlSQ74LnAdQtdMa1"><p>Властелин колец: Война рохирримов</p></div>
+          <div class="card" onclick="openContentDetails('Твой цвет', 'https://shikimori.one/uploads/poster/animes/53747/main_2x-3fab41746584b9915967aea58934f6d7.webp', 'film')"><img src="https://shikimori.one/uploads/poster/animes/53747/main_2x-3fab41746584b9915967aea58934f6d7.webp"><p>Твой цвет</p></div>
+          <div class="card" onclick="openContentDetails('Стеклодув', 'https://avatars.mds.yandex.net/get-kinopoisk-image/10703959/60aa3d84-118b-44d3-b2e4-061594161dd4/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/10703959/60aa3d84-118b-44d3-b2e4-061594161dd4/600x900"><p>Стеклодув</p></div>
+          <div class="card" onclick="openContentDetails('Подземелье вкусностей', 'https://anilibria.tv/storage/releases/posters/9612/UGku0qpJzfEJMtcf3exNM63a1MPGrRfr.jpg', 'film')"><img src="https://anilibria.tv/storage/releases/posters/9612/UGku0qpJzfEJMtcf3exNM63a1MPGrRfr.jpg"><p>Подземелье вкусностей</p></div>
+          <div class="card" onclick="openContentDetails('Акира', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/f96b4df3-6944-49e6-aae7-6964418826b3/600x900', 'film')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/f96b4df3-6944-49e6-aae7-6964418826b3/600x900"><p>Акира</p></div>
+          <div class="card" onclick="openContentDetails('За облаками', 'https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/4715601-2106477.jpeg', 'film')"><img src="https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/4715601-2106477.jpeg"><p>За облаками</p></div>
+          <div class="card" onclick="openContentDetails('Судзуме закрывает двери', 'https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/50481615-2420481.jpeg', 'film')"><img src="https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/50481615-2420481.jpeg"><p>Судзуме закрывает двери</p></div>
+          <div class="card" onclick="openContentDetails('Оглянись', 'https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/50878190-4620308.jpg', 'film')"><img src="https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/50878190-4620308.jpg"><p>Оглянись</p></div>
+          <div class="card" onclick="openContentDetails('На твоей волне', 'https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/49548718-1367844.jpg', 'film')"><img src="https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/49548718-1367844.jpg"><p>На твоей волне</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel2', 1)">❯</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <img src="images/Kiromaru.png" alt="Логотип" class="footer-logo">
+        <div class="footer-text">
+          <h2>Kiromaru: узнай всё об аниме за минуту</h2>
+          <p>На нашем сайте вы найдёте краткие описания лучших аниме — без рекламы, быстро и удобно. Мы поможем вам выбрать, что смотреть дальше!</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="contacts-section" style="text-align: center;">
+    <h3>Контактная информация</h3>
+    <div class="contact-email" style="justify-content: center;">
+      <span>✉️</span>
+      <a href="mailto:kiromaru.official@gmail.com">kiromaru.official@gmail.com</a>
+    </div>
+    <p>Мы всегда рады вашим вопросам и предложениям!</p>
+  </div>
+
+  <div class="copyright-note" style="text-align: center;">
+    <p>© 2025 Kiromaru | С любовью к аниме и коддингу 🖥️❤️</p>
+  </div>
+
+  <script src="scripts/filmData.js" defer></script>
+  <script src="scripts/search.js" defer></script>
+  <script src="scripts/filmsfunc.js" defer></script>
+</body>
+</html>

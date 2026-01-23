@@ -1,0 +1,708 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 24px;
+  color: #0037ac;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0037ac;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.search-input {
+  width: 250px;
+  padding: 8px 15px 8px 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #222;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #777;
+  font-size: 14px;
+}
+
+.slider-container {
+  margin-top: 60px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.slide-bg.active {
+  opacity: 0.3;
+}
+
+.slider-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.anime-poster {
+  width: 450px;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.anime-poster:hover {
+  transform: scale(1.02);
+}
+
+.slide-info {
+  width: 450px;
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 15px;
+  padding: 25px;
+  overflow-y: auto;
+  max-height: 650px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.anime-title {
+  max-height: 120px;
+  margin-bottom: 20px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.anime-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.anime-rating {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.stars {
+  color: gold;
+  font-size: 30px;
+}
+
+.rating-text {
+  margin-left: 10px;
+  color: #ccc;
+  font-size: 15px;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-left {
+  left: 20px;
+}
+
+.nav-right {
+  right: 20px;
+}
+
+.recommendations {
+  padding: 60px 20px;
+  background-color: #000;
+  position: relative;
+  z-index: 5;
+}
+
+.recommendations h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-left {
+  left: -20px;
+}
+
+.scroll-right {
+  right: -20px;
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+}
+
+.footer-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+}
+
+.footer-text h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #0037ac;
+}
+
+.footer-text p {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.search-error {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4444;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 2000;
+  display: none;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #222;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #1a1a1a;
+}
+
+.search-result-image {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.search-result-info {
+  flex: 1;
+}
+
+.search-result-title {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.search-result-type {
+  color: #888;
+  font-size: 12px;
+}
+
+.search-no-results {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+.creators-block {
+  background-color: #000;
+  color: white;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.creators-content, .contacts-section {
+  margin-bottom: 25px;
+}
+
+.creators-block h3 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #f8f8f8;
+}
+
+.creator-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.creator-card {
+  display: flex;
+  align-items: center;
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  width: 350px;
+  text-align: left;
+}
+
+.creator-avatar {
+  font-size: 35px;
+  margin-right: 15px;
+}
+
+.creator-info h4 {
+  margin: 0 0 5px 0;
+  color: #f8f8f8;
+  font-size: 1.2em;
+}
+
+.creator-info p {
+  margin: 0;
+  color: #ccc;
+  font-size: 1em;
+}
+
+.contact-email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.contact-email span {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.contact-email a {
+  color: #0037ac;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.contact-email a:hover {
+  text-decoration: underline;
+}
+
+.copyright-note {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .slider-content {
+    padding: 80px 20px 40px;
+    flex-direction: column;
+  }
+  
+  .slide {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .anime-poster {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 50vh;
+  }
+  
+  .slide-info {
+    width: 100%;
+    max-width: 500px;
+    max-height: none;
+  }
+  
+  .nav-button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  .search-input {
+    width: 150px;
+  }
+
+  .search-dropdown {
+    max-height: 300px;
+  }
+  
+  .search-result-item {
+    padding: 10px 12px;
+  }
+  
+  .search-result-image {
+    width: 40px;
+    height: 56px;
+    margin-right: 12px;
+  }
+  
+  .search-result-title {
+    font-size: 13px;
+  }
+  
+  .search-result-type {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+  }
+  
+  .left-header {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .search-container {
+    margin-right: 0;
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 15px 8px 35px;
+  }
+  
+  .search-icon {
+    left: 10px;
+  }
+  
+  .slider-container {
+    margin-top: 80px;
+  }
+  
+  .slider-content {
+    padding: 20px 15px;
+  }
+  
+  .slide {
+    gap: 15px;
+  }
+  
+  .anime-poster {
+    max-height: 40vh;
+  }
+  
+  .slide-info {
+    padding: 15px;
+  }
+  
+  .anime-title {
+    margin-bottom: 10px;
+    max-height: 80px;
+  }
+  
+  .anime-description {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+  
+  .recommendations {
+    padding: 40px 15px;
+  }
+  
+  .recommendations h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    width: 150px;
+  }
+  
+  .card img {
+    height: 220px;
+  }
+  
+  .scroll-btn {
+    display: none;
+  }
+  
+  .footer {
+    padding: 30px 15px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    margin-bottom: 15px;
+  }
+  
+  .creator-card {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .creator-avatar {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  .creator-info h4 {
+    font-size: 16px;
+  }
+  
+  .creator-info p {
+    font-size: 14px;
+  }
+  
+  .contact-email {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-email span {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  .anime-poster {
+    max-height: 35vh;
+  }
+  
+  .anime-description {
+    font-size: 15px;
+  }
+  
+  .card {
+    width: 130px;
+  }
+  
+  .card img {
+    height: 190px;
+  }
+}

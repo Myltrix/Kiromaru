@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — Kiromaru</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="icon" href="images/KiromaruLogo.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img src="images/Kiromaru.png" alt="Логотип" class="logo">
+      <div class="logo-text">Kiromaru</div>
+      <nav>
+        <a href="index.html">Главное</a>
+        <a href="anime.html">Аниме</a>
+        <a href="films.html">Фильмы</a>
+        <a href="news.html">Новости</a>
+      </nav>
+    </div>
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" class="search-input" placeholder="Поиск аниме..." id="searchInput">
+    </div>
+  </header>
+
+  <div class="search-error" id="searchError">Аниме не найдено. Попробуйте другой запрос.</div>
+
+  <div class="slider-container">
+    <div class="slide-bg active" style="background-image: url('https://zastavki.gas-kvas.com/uploads/posts/2024-05/zastavki-gas-kvas-com-4g1q-p-zastavki-moya-geroiskaya-akademiya-30.jpg')"></div>
+    <div class="slide-bg" style="background-image: url('https://media.es.wired.com/photos/6713e00221a0e21daf475a23/16:9/w_1280,c_limit/dandadan-key-artwork.jpg')"></div>
+    <div class="slide-bg" style="background-image: url('https://a-static.besthdwallpaper.com/solo-leveling-sung-jin-woo-shadows-wallpaper-2560x1600-88315_7.jpg')"></div>
+
+    <div class="slider-content">
+      <div class="slide active">
+        <img src="https://shikimori.one/uploads/poster/animes/31964/main_2x-7b552c0bcaf9121f6ead0281b1699b07.webp" 
+             alt="Моя геройская академия" 
+             class="anime-poster" 
+             onclick="openContentDetails('Моя геройская академия', 'https://shikimori.one/uploads/poster/animes/31964/main_2x-7b552c0bcaf9121f6ead0281b1699b07.webp', 'anime')">
+        <div class="slide-info">
+          <img src="images/myheroacademia.png" 
+               alt="Моя геройская академия" 
+               class="anime-title">
+          <p class="anime-description">Четырнадцатилетний Идзуку Мидория рано осознал, что люди не рождаются равными. А пришло это понимание, когда его начали дразнить одноклассники, одарённые особой силой. Несмотря на то, что большинство людей в этом мире рождаются с необычными способностями, Идзуку оказался среди тех немногих, кто напрочь их лишён. Однако это не стало помехой для мальчика в стремлении стать таким же легендарным героем, как Всемогущий.</p>
+          <div class="anime-rating">
+            <div class="stars">★★★★☆</div>
+            <div class="rating-text">| Средняя оценка:8.7/10</div>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://m.media-amazon.com/images/M/MV5BYWFhOWMxNTYtZThiMi00ZmQ5LTlmODktN2QwNzUyZjMyZGQzXkEyXkFqcGc@._V1_.jpg" 
+             alt="Дандадан" 
+             class="anime-poster" 
+             onclick="openContentDetails('Дандадан', 'https://m.media-amazon.com/images/M/MV5BYWFhOWMxNTYtZThiMi00ZmQ5LTlmODktN2QwNzUyZjMyZGQzXkEyXkFqcGc@._V1_.jpg', 'anime')">
+        <div class="slide-info">
+          <img src="images/dandadan.png" 
+               alt="Дандадан" 
+               class="anime-title">
+          <p class="anime-description">Старшеклассница Момо Аясэ верит в привидений и часто интересуется мистикой. Она знакомится с Кэном Такакурой — парнем, который уверен в существовании инопланетян. Между ними возникает спор, и чтобы доказать друг другу правоту, они решают вместе посетить загадочные оккультные места.</p>
+          <div class="anime-rating">
+            <div class="stars">★★★★☆</div>
+            <div class="rating-text">| Средняя оценка:8.8/10</div>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://storage.yandexcloud.net/s3-metaratings-storage/images/89/96/8996104f9a5990831669e8742d1415de.png" 
+             alt="Поднятие уровня в одиночку" 
+             class="anime-poster" 
+             onclick="openContentDetails('Поднятие уровня в одиночку', 'https://storage.yandexcloud.net/s3-metaratings-storage/images/89/96/8996104f9a5990831669e8742d1415de.png', 'anime')">
+        <div class="slide-info">
+          <img src="images/sololeveling.png" 
+               alt="Поднятие уровня в одиночку" 
+               class="anime-title">
+          <p class="anime-description">Сон Джин-Ву — главный герой «Поднятия уровня в одиночку». Раньше он был самым слабым охотником Е-ранга, которого никто не воспринимал всерьёз. Но после того, как таинственная Система объявила его «игроком», у него появилась возможность прокачивать свои способности и становиться сильнее.</p>
+          <div class="anime-rating">
+            <div class="stars">★★★★☆</div>
+            <div class="rating-text">| Средняя оценка:7.7/10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="nav-button nav-left" onclick="changeSlide(-1)">❮</button>
+    <button class="nav-button nav-right" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <section class="recommendations">
+    <h2>Лучшие варианты для вас</h2>
+    <div class="carousel-container">
+      <button class="scroll-btn scroll-left" onclick="scrollCarousel(-1)">❮</button>
+      <div class="carousel" id="carousel">
+        <div class="card" onclick="openAnimeDetails('Поднятие уровня в одиночку', 'https://www.kino-teatr.ru/movie/poster/158790/227021.jpg', 'anime')"><img src="https://www.kino-teatr.ru/movie/poster/158790/227021.jpg" alt=""><p>Поднятие уровня в одиночку</p></div>
+        <div class="card" onclick="openAnimeDetails('Монолог фармацевта', 'https://media.themoviedb.org/t/p/w500/e3ojpANrFnmJCyeBNTinYwyBCIN.jpg', 'anime')"><img src="https://media.themoviedb.org/t/p/w500/e3ojpANrFnmJCyeBNTinYwyBCIN.jpg" alt=""><p>Монолог фармацевта</p></div>
+        <div class="card" onclick="openAnimeDetails('Доктор Стоун', 'https://shikimori.one/uploads/poster/animes/40852/main_alt-bf2e57d30b2e2e2aeff8af208e47d32a.jpeg', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/40852/main_alt-bf2e57d30b2e2e2aeff8af208e47d32a.jpeg" alt=""><p>Доктор Стоун</p></div>
+        <div class="card" onclick="openAnimeDetails('Истребитель демонов', 'https://poster4.me/wp-content/uploads/istrebitel-demonov_3.jpeg', 'anime')"><img src="https://poster4.me/wp-content/uploads/istrebitel-demonov_3.jpeg" alt=""><p>Истребитель демонов</p></div>
+        <div class="card" onclick="openAnimeDetails('Пламенный отряд', 'https://media.kg-portal.ru/anime/e/ennennnoshouboutai2/posters/ennennnoshouboutai2_2.jpg', 'anime')"><img src="https://media.kg-portal.ru/anime/e/ennennnoshouboutai2/posters/ennennnoshouboutai2_2.jpg" alt=""><p>Пламенный отряд</p></div>
+        <div class="card" onclick="openAnimeDetails('Дандадан', 'https://www.kino-teatr.ru/movie/poster/177488/220703.jpg', 'anime')"><img src="https://www.kino-teatr.ru/movie/poster/177488/220703.jpg" alt=""><p>Дандадан</p></div>
+        <div class="card" onclick="openAnimeDetails('Реанкарнация безработного', 'https://ru-images.kinorium.com/movie/1080/2183933.jpg?1692112101', 'anime')"><img src="https://ru-images.kinorium.com/movie/1080/2183933.jpg?1692112101" alt=""><p>Реанкарнация безработного</p></div>
+        <div class="card" onclick="openAnimeDetails('Человек бензопила', 'https://m.media-amazon.com/images/I/71DOGFSR6bL._UF894,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/71DOGFSR6bL._UF894,1000_QL80_.jpg" alt=""><p>Человек бензопила</p></div>
+        <div class="card" onclick="openAnimeDetails('Атака титанов', 'https://poster4.me/wp-content/uploads/2022/05/ataka-titanov_5.jpg', 'anime')"><img src="https://poster4.me/wp-content/uploads/2022/05/ataka-titanov_5.jpg" alt=""><p>Атака титанов</p></div>
+        <div class="card" onclick="openAnimeDetails('Магия и мускулы', 'https://media.themoviedb.org/t/p/w500/vp3oSq3XUSDeSjv4fvSVlT4mleC.jpg', 'anime')"><img src="https://media.themoviedb.org/t/p/w500/vp3oSq3XUSDeSjv4fvSVlT4mleC.jpg" alt=""><p>Магия и мускулы</p></div>
+        <div class="card" onclick="openAnimeDetails('Начало после конца', 'https://www.goha.ru/s/A:Nj/TU/VG6TQS8KfR.webp', 'anime')"><img src="https://www.goha.ru/s/A:Nj/TU/VG6TQS8KfR.webp" alt=""><p>Начало после конца</p></div>
+        <div class="card" onclick="openAnimeDetails('Ветролом', 'https://shikimori.one/uploads/poster/animes/54900/main_2x-11cfd006fb5541bd055235e62d7b2da9.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/54900/main_2x-11cfd006fb5541bd055235e62d7b2da9.webp" alt=""><p>Ветролом</p></div>
+      </div>
+      <button class="scroll-btn scroll-right" onclick="scrollCarousel(1)">❯</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="images/Kiromaru.png" alt="Логотип" class="footer-logo">
+      <div class="footer-text">
+        <h2>Kiromaru: узнай всё об аниме за минуту</h2>
+        <p>На нашем сайте вы найдёте краткие описания лучших аниме — быстро и удобно. Мы поможем вам выбрать, что смотреть дальше!</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="contacts-section" style="text-align: center;">
+    <h3>Контактная информация</h3>
+    <div class="contact-email" style="justify-content: center;">
+      <span>✉️</span>
+      <a href="mailto:kiromaru.official@gmail.com">kiromaru.official@gmail.com</a>
+    </div>
+    <p>Мы всегда рады вашим вопросам и предложениям!</p>
+  </div>
+
+  <div class="copyright-note" style="text-align: center;">
+    <p>© 2025 Kiromaru | С любовью к аниме и коддингу 🖥️❤️</p>
+  </div>
+
+  <script src="scripts/animeData.js" defer></script>
+  <script src="scripts/search.js" defer></script>
+  <script src="scripts/indexfunc.js" defer></script>
+</body>
+</html>

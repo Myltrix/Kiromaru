@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аниме — Kiromaru</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles/anime.css">
+  <link rel="icon" href="images/KiromaruLogo.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img src="images/Kiromaru.png" alt="Логотип" class="logo">
+      <div class="logo-text">Kiromaru</div>
+      <nav>
+        <a href="index.html">Главное</a>
+        <a href="anime.html">Аниме</a>
+        <a href="films.html">Фильмы</a>
+        <a href="news.html">Новости</a>
+      </nav>
+    </div>
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" class="search-input" placeholder="Поиск аниме..." id="searchInput">
+    </div>
+  </header>
+
+  <div class="search-error" id="searchError">Фильм не найден. Попробуйте другой запрос.</div>
+
+  <div class="main-content">
+    <div class="section-nav">
+      <div class="nav-dot active" data-section="best" data-title="Лучшее для вас"></div>
+      <div class="nav-dot" data-section="popular" data-title="Популярные"></div>
+      <div class="nav-dot" data-section="isekai" data-title="Исекай"></div>
+      <div class="nav-dot" data-section="romance" data-title="Романтика"></div>
+      <div class="nav-dot" data-section="comedy" data-title="Комедия"></div>
+    </div>
+
+    <section class="section" id="best">
+      <h2>Лучшее для вас</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel1', -1)">❮</button>
+        <div class="card-carousel" id="carousel1">
+          <div class="card" onclick="openAnimeDetails('Атака титанов', 'https://poster4.me/wp-content/uploads/2022/05/ataka-titanov_5.jpg', 'anime')"><img src="https://poster4.me/wp-content/uploads/2022/05/ataka-titanov_5.jpg"><p>Атака титанов</p></div>
+          <div class="card" onclick="openAnimeDetails('Клинок рассекающий демонов', 'https://www.kino-teatr.ru/movie/posters/big/1/0/146101.jpg', 'anime')"><img src="https://www.kino-teatr.ru/movie/posters/big/1/0/146101.jpg"><p>Клинок рассекающий демонов</p></div>
+          <div class="card" onclick="openAnimeDetails('Доктор Стоун', 'https://shikimori.one/uploads/poster/animes/40852/main_alt-bf2e57d30b2e2e2aeff8af208e47d32a.jpeg', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/40852/main_alt-bf2e57d30b2e2e2aeff8af208e47d32a.jpeg"><p>Доктор Стоун</p></div>
+          <div class="card" onclick="openAnimeDetails('Тетрадь смерти', 'https://cdn.kanobu.ru/anime/anime/a88d6a18-0699-4d24-ad30-c37bbd1da72f.jpg', 'anime')"><img src="https://cdn.kanobu.ru/anime/anime/a88d6a18-0699-4d24-ad30-c37bbd1da72f.jpg"><p>Тетрадь смерти</p></div>
+          <div class="card" onclick="openAnimeDetails('Хантер х хантер', 'https://m.media-amazon.com/images/I/71aoeOhdNnL._UF1000,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/71aoeOhdNnL._UF1000,1000_QL80_.jpg"><p>Хантер х хантер</p></div>
+          <div class="card" onclick="openAnimeDetails('Монолог фармацевта', 'https://media.kg-portal.ru/anime/k/kusuriyanohitorigoto/posters/kusuriyanohitorigoto_3s_2x.jpg', 'anime')"><img src="https://media.kg-portal.ru/anime/k/kusuriyanohitorigoto/posters/kusuriyanohitorigoto_3s_2x.jpg"><p>Монолог фармацевта</p></div>
+          <div class="card" onclick="openAnimeDetails('Ван пис', 'https://m.media-amazon.com/images/I/81ncF44lNnL._AC_SL1500_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/81ncF44lNnL._AC_SL1500_.jpg"><p>Ван пис</p></div>
+          <div class="card" onclick="openAnimeDetails('Пламенный отряд', 'https://cover.imglib.info/uploads/anime/14834/cover/dd1a7277-9f43-41ee-86da-07c1f734b18d.jpg', 'anime')"><img src="https://cover.imglib.info/uploads/anime/14834/cover/dd1a7277-9f43-41ee-86da-07c1f734b18d.jpg"><p>Пламенный отряд</p></div>
+          <div class="card" onclick="openAnimeDetails('Поднятие уровня в одиночку', 'https://ru-images.kinorium.com/movie/1080/9655445.jpg?1713778823', 'anime')"><img src="https://ru-images.kinorium.com/movie/1080/9655445.jpg?1713778823"><p>Поднятие уровня в одиночку</p></div>
+          <div class="card" onclick="openAnimeDetails('Магическая битва', 'https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/bfd6c4b8-2796-4727-8725-59651d2820a7/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/bfd6c4b8-2796-4727-8725-59651d2820a7/600x900"><p>Магическая битва</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel1', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="popular">
+      <h2>Популярные</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel2', -1)">❮</button>
+        <div class="card-carousel" id="carousel2">
+          <div class="card" onclick="openAnimeDetails('Поднятие уровня в одиночку', 'https://ru-images.kinorium.com/movie/1080/9655445.jpg?1713778823', 'anime')"><img src="https://ru-images.kinorium.com/movie/1080/9655445.jpg?1713778823"><p>Поднятие уровня в одиночку</p></div>
+          <div class="card" onclick="openAnimeDetails('Реанкарнация безработного', 'https://shikimori.one/uploads/poster/animes/39535/main_2x-002caba10222dcc5768cba100ef94ea5.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/39535/main_2x-002caba10222dcc5768cba100ef94ea5.webp"><p>Реанкарнация безработного</p></div>
+          <div class="card" onclick="openAnimeDetails('Человек бензопила', 'https://ru-images.kinorium.com/movie/1080/2679417.jpg?1669894397', 'anime')"><img src="https://ru-images.kinorium.com/movie/1080/2679417.jpg?1669894397"><p>Человек бензопила</p></div>
+          <div class="card" onclick="openAnimeDetails('Атака титанов', 'https://poster4.me/wp-content/uploads/2022/05/ataka-titanov_5.jpg', 'anime')"><img src="https://poster4.me/wp-content/uploads/2022/05/ataka-titanov_5.jpg"><p>Атака титанов</p></div>
+          <div class="card" onclick="openAnimeDetails('Re:Zero - Жизнь с нуля в альтернативном мире', 'https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/73689358-7df0-43e4-8ffd-ff0d8c36f333/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/73689358-7df0-43e4-8ffd-ff0d8c36f333/600x900"><p>Re:Zero - Жизнь с нуля в альтернативном мире</p></div>
+          <div class="card" onclick="openAnimeDetails('Клинок, рассекающий демонов', 'https://www.kino-teatr.ru/movie/posters/big/1/0/146101.jpg', 'anime')"><img src="https://www.kino-teatr.ru/movie/posters/big/1/0/146101.jpg"><p>Клинок, рассекающий демонов</p></div>
+          <div class="card" onclick="openAnimeDetails('Кайдзю №8', 'https://shikimori.one/uploads/poster/animes/52588/main_2x-f7ad87fd5f0f5f9da3280188da9630ae.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/52588/main_2x-f7ad87fd5f0f5f9da3280188da9630ae.webp"><p>Кайдзю №8</p></div>
+          <div class="card" onclick="openAnimeDetails('Провожающая в последний путь Фрирен', 'https://shikimori.one/uploads/poster/animes/52991/main_2x-83b82e9ff64f1b0821239f88ab8651ab.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/52991/main_2x-83b82e9ff64f1b0821239f88ab8651ab.webp"><p>Провожающая в последний путь Фрирен</p></div>
+          <div class="card" onclick="openAnimeDetails('Сага о Винланде', 'https://static.hdrezka.ac/i/2022/2/13/e2ed3c4e98503hd30i99u.png', 'anime')"><img src="https://static.hdrezka.ac/i/2022/2/13/e2ed3c4e98503hd30i99u.png"><p>Сага о Винланде</p></div>
+          <div class="card" onclick="openAnimeDetails('Ванпанчмен', 'https://static.hdrezka.ac/i/2021/11/14/y419ad80e030ecg21k18l.png', 'anime')"><img src="https://static.hdrezka.ac/i/2021/11/14/y419ad80e030ecg21k18l.png"><p>Ванпанчмен</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel2', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="isekai">
+      <h2>Исекай</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel3', -1)">❮</button>
+        <div class="card-carousel" id="carousel3">
+          <div class="card" onclick="openAnimeDetails('Этот замечательный мир', 'https://shikimori.one/uploads/poster/animes/49458/main-0cbbe43a05ce40ae89988a119f989146.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/49458/main-0cbbe43a05ce40ae89988a119f989146.webp"><p>Этот замечательный мир</p></div>
+          <div class="card" onclick="openAnimeDetails('Реанкарнация безработного', 'https://shikimori.one/uploads/poster/animes/45576/main-b332c6db6756a046474c3715cb332d2c.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/45576/main-b332c6db6756a046474c3715cb332d2c.webp"><p>Реанкарнация безработного</p></div>
+          <div class="card" onclick="openAnimeDetails('О моём перерождении в слизь', 'https://shikimori.one/uploads/poster/animes/39551/main-f26ec39d7178557487d45ce1c1d8ee56.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/39551/main-f26ec39d7178557487d45ce1c1d8ee56.webp"><p>О моём перерождении в слизь</p></div>
+          <div class="card" onclick="openAnimeDetails('Re:Zero. Жизнь с нуля в альтернативном мире', 'https://shikimori.one/uploads/poster/animes/54857/main-92fb1955f72dd99f51d79ce9aa3b3661.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/54857/main-92fb1955f72dd99f51d79ce9aa3b3661.webp"><p>Re:Zero. Жизнь с нуля в альтернативном мире</p></div>
+          <div class="card" onclick="openAnimeDetails('Восхождение в тени', 'https://shikimori.one/uploads/poster/animes/54595/main-66f691966a8d53c614945f736c420a28.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/54595/main-66f691966a8d53c614945f736c420a28.webp"><p>Восхождение в тени</p></div>
+          <div class="card" onclick="openAnimeDetails('Военная хроника маленькой девочки', 'https://shikimori.one/uploads/poster/animes/37055/main-441a3f88d0031633fa82f1c26427aab1.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/37055/main-441a3f88d0031633fa82f1c26427aab1.webp"><p>Военная хроника маленькой девочки</p></div>
+          <div class="card" onclick="openAnimeDetails('Мастера меча онлайн', 'https://static.hdrezka.ac/i/2022/9/14/e7cb0f5f10062lr62p63b.png', 'anime')"><img src="https://static.hdrezka.ac/i/2022/9/14/e7cb0f5f10062lr62p63b.png"><p>Мастера меча онлайн</p></div>
+          <div class="card" onclick="openAnimeDetails('Получив читерскую способность в другом мире, я стал непобедимым', 'https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/0750634e-cc5a-49ad-95e1-a821b9508d6d/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/0750634e-cc5a-49ad-95e1-a821b9508d6d/600x900"><p>Получив читерскую способность в другом мире, я стал непобедимым</p></div>
+          <div class="card" onclick="openAnimeDetails('Дядя из другого мира', 'https://static.hdrezka.ac/i/2023/8/18/f414862f02f33zc19o92l.png', 'anime')"><img src="https://static.hdrezka.ac/i/2023/8/18/f414862f02f33zc19o92l.png"><p>Дядя из другого мира</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel3', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="romance">
+      <h2>Романтика</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel4', -1)">❮</button>
+        <div class="card-carousel" id="carousel4">
+          <div class="card" onclick="openAnimeDetails('Торадора', 'https://m.media-amazon.com/images/I/51nfGthjluL._AC_UF1000,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/51nfGthjluL._AC_UF1000,1000_QL80_.jpg"><p>Торадора</p></div>
+          <div class="card" onclick="openAnimeDetails('Хоримия', 'https://media.kg-portal.ru/anime/h/horimiya/posters/horimiya_2s_2x.jpg', 'anime')"><img src="https://media.kg-portal.ru/anime/h/horimiya/posters/horimiya_2s_2x.jpg"><p>Хоримия</p></div>
+          <div class="card" onclick="openAnimeDetails('Дотянуться до тебя', 'https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/c7f01abd-7f46-433b-a9a5-06e22559f705/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/c7f01abd-7f46-433b-a9a5-06e22559f705/600x900"><p>Дотянуться до тебя</p></div>
+          <div class="card" onclick="openAnimeDetails('Твоя апрельская ложь', 'https://shikimori.one/uploads/poster/animes/23273/main_2x-4e73be80859ca6aeb7dc22f05fb5c484.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/23273/main_2x-4e73be80859ca6aeb7dc22f05fb5c484.webp"><p>Твоя апрельская ложь</p></div>
+          <div class="card" onclick="openAnimeDetails('Цуки га Кирэй', 'https://shikimori.one/uploads/poster/animes/34822/main_2x-9a67a1830bb83de07891a801a0bea4df.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/34822/main_2x-9a67a1830bb83de07891a801a0bea4df.webp"><p>Цуки га Кирэй</p></div>
+          <div class="card" onclick="openAnimeDetails('Путь юности', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/859e2aa9-11eb-45bb-b9cd-ee07bbe6f8e2/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/859e2aa9-11eb-45bb-b9cd-ee07bbe6f8e2/600x900"><p>Путь юности</p></div>
+          <div class="card" onclick="openAnimeDetails('Кагуя: В любви как на войне', 'https://shikimori.one/uploads/poster/animes/37999/main_2x-245d469bd8aca4fde8a7ac8a8537de43.webp', 'anime')"><img src="https://shikimori.one/uploads/poster/animes/37999/main_2x-245d469bd8aca4fde8a7ac8a8537de43.webp"><p>Кагуя: В любви как на войне</p></div>
+          <div class="card" onclick="openAnimeDetails('Орегайру', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/c8d24eef-322b-4e15-bea2-a264726938ed/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/c8d24eef-322b-4e15-bea2-a264726938ed/600x900"><p>Орегайру</p></div>
+          <div class="card" onclick="openAnimeDetails('Старшая школа DXD', 'https://static.hdrezka.ac/i/2021/11/16/uc4bc4bdffbc9qu27b83g.png', 'anime')"><img src="https://static.hdrezka.ac/i/2021/11/16/uc4bc4bdffbc9qu27b83g.png"><p>Старшая школа DXD</p></div>
+          <div class="card" onclick="openAnimeDetails('Ангел по соседству', 'https://static.hdrezka.ac/i/2023/1/8/j39ffa2d4691aqc90r63g.png', 'anime')"><img src="https://static.hdrezka.ac/i/2023/1/8/j39ffa2d4691aqc90r63g.png"><p>Ангел по соседству</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel4', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="comedy">
+      <h2>Комедия</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel5', -1)">❮</button>
+        <div class="card-carousel" id="carousel5">
+          <div class="card" onclick="openAnimeDetails('Необъятный океан', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/ca5330f6-53b1-4c0a-a06f-36842e87199a/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/ca5330f6-53b1-4c0a-a06f-36842e87199a/600x900"><p>Необъятный океан</p></div>
+          <div class="card" onclick="openAnimeDetails('Гинтама', 'https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/fe1077a6-8547-4f75-9849-8c409979f6db/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/fe1077a6-8547-4f75-9849-8c409979f6db/600x900"><p>Гинтама</p></div>
+          <div class="card" onclick="openAnimeDetails('Несчастная жизнь Сайки Кусуо', 'https://static.findanime.net/uploads/pics/00/55/871.jpg', 'anime')"><img src="https://static.findanime.net/uploads/pics/00/55/871.jpg"><p>Несчастная жизнь Сайки Кусуо</p></div>
+          <div class="card" onclick="openAnimeDetails('Обычная жизнь старшеклассников', 'https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/b4d41759-6728-4702-b272-dfcab3745368/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/b4d41759-6728-4702-b272-dfcab3745368/600x900"><p>Обычная жизнь старшеклассников</p></div>
+          <div class="card" onclick="openAnimeDetails('Азуманга Дайо', 'https://upload.wikimedia.org/wikipedia/ru/e/ee/Azumanga_up.jpg', 'anime')"><img src="https://upload.wikimedia.org/wikipedia/ru/e/ee/Azumanga_up.jpg"><p>Азуманга Дайо</p></div>
+          <div class="card" onclick="openAnimeDetails('Баракамон', 'https://www.kino-teatr.ru/movie/posters/big/9/1/160619.jpg', 'anime')"><img src="https://www.kino-teatr.ru/movie/posters/big/9/1/160619.jpg"><p>Баракамон</p></div>
+          <div class="card" onclick="openAnimeDetails('Великий учитель Онидзука', 'https://upload.wikimedia.org/wikipedia/ru/d/d3/GTO.jpg', 'anime')"><img src="https://upload.wikimedia.org/wikipedia/ru/d/d3/GTO.jpg"><p>Великий учитель Онидзука</p></div>
+          <div class="card" onclick="openAnimeDetails('Сатана на подработке', 'https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/f11ef252-8519-4de1-a1c1-823608f2d19e/600x900', 'anime')"><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/f11ef252-8519-4de1-a1c1-823608f2d19e/600x900"><p>Сатана на подработке</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel5', 1)">❯</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <img src="images/Kiromaru.png" alt="Логотип" class="footer-logo">
+        <div class="footer-text">
+          <h2>Kiromaru: узнай всё об аниме за минуту</h2>
+          <p>На нашем сайте вы найдёте краткие описания лучших аниме — без рекламы, быстро и удобно. Мы поможем вам выбрать, что смотреть дальше!</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="contacts-section" style="text-align: center;">
+    <h3>Контактная информация</h3>
+    <div class="contact-email" style="justify-content: center;">
+      <span>✉️</span>
+      <a href="mailto:kiromaru.official@gmail.com">kiromaru.official@gmail.com</a>
+    </div>
+    <p>Мы всегда рады вашим вопросам и предложениям!</p>
+  </div>
+
+  <div class="copyright-note" style="text-align: center;">
+    <p>© 2025 Kiromaru | С любовью к аниме и коддингу 🖥️❤️</p>
+  </div>
+
+  <script src="scripts/animeData.js" defer></script>
+  <script src="scripts/search.js" defer></script>
+  <script src="scripts/animefunc.js" defer></script>
+</body>
+</html>
