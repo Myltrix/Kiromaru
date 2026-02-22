@@ -29,11 +29,11 @@ function openContentDetails(title, imageUrl, contentType) {
   }
 }
 
-function scrollCarousel(id, direction) {
-  const carousel = document.getElementById(id);
+function scrollCarousel(direction) {
+  const carousel = document.getElementById('carousel');
   if (carousel) {
     carousel.scrollBy({ 
-      left: direction * 220, 
+      left: direction * 300, 
       behavior: 'smooth' 
     });
   }
