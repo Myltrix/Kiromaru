@@ -47,4 +47,4 @@ Kiromaru is a multi-page anime and movie discovery platform. It showcases core f
 - Custom Functions (opening content details, scrolling sliders, handling search logic)
 - Event Handling (click events, keyboard inputs for search functionality)
 - DOM Manipulation (updating page content, toggling classes, dynamic styling)
-- URL Parameters (parsing query strings to load specific data on details pages)
+- URL Parameters (parsing query strings to load specific data on details pages).
